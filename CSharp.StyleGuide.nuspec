@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>Tapiit.CSharp.Styleguide</id>
+		<version>1.0.8</version>
+		<description>Tapiit C# Styleguide</description>
+		<authors>Nick Heath</authors>
+		<dependencies>
+			<dependency id="StyleCop.Analyzers" version="1.1.118" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="stylecop.json" target="" />
+		<file src="StyleCop.ruleset" target="" />
+		<file src="CSharp.Styleguide.props" target="build" />
+	</files>
+</package>

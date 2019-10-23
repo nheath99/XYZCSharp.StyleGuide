@@ -1,0 +1,16 @@
+trigger:
+- master
+
+steps:
+- task: NuGetCommand@2
+  displayName: 'NuGet pack'
+  inputs:
+    command: pack
+    packagesToPack: '**/*.nuspec'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: 'NuGet Package'
+  condition: succeededOrFailed()
